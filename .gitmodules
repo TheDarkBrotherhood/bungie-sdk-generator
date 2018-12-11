@@ -3,5 +3,5 @@
 	url = git@github.com:Yogarine/bungie-sdk-php.git
 [submodule "openapi-generator"]
 	path = openapi-generator
-	url = https://github.com/OpenAPITools/openapi-generator.git
+	url = git@github.com:Yogarine/openapi-generator.git
 	branch = bungie-sdk

@@ -15,9 +15,9 @@ services:
     entrypoint: "/opt/openapi-generator/docker-entrypoint.sh"
     command: >
       generate
-      --generator-name php
-      --config         /local/openapi-config.php.json
+      --generator-name ${OPENAPI_GENERATOR:-php}
+      --config         /local/openapi-config.${OPENAPI_GENERATOR:-php}.json
       --input-spec     https://raw.githubusercontent.com/Bungie-net/api/master/openapi.json
-      --output         /local/bungie-sdk-php
+      --output         /local/bungie-sdk-${OPENAPI_GENERATOR:-php}
       -DapiTests=false
       -DmodelTests=false

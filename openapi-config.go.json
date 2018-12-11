@@ -1,0 +1,11 @@
+{
+  "packageName": "bungie",
+  "invokerPackage" : "Bungie",
+  "modelPackage": "Model",
+  "variableNamingConvention": "camelCase",
+  "srcBasePath": "src",
+  "gitUserId": "Yogarine",
+  "gitRepoId": "bungie-sdk-go",
+  "validateSpec": false,
+  "removeOperationIdPrefix": true
+}
