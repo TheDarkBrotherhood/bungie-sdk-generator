@@ -13,19 +13,33 @@ It currently uses a fork of OpenAPI Generator that includes some specific fixes 
 
 Check out the submodules:
 
-```git submodule update --init```
+```bash
+git submodule update --init
+```
+
+Make sure the OpenAPI generator submodule is in the right branch"
+
+```bash
+cd openapi-generator
+git checkout bungie-sdk
+cd ..
+```
 
 Build the OpenAPI generator:
 
-```docker-compose run openapi-generator mvn package -Dmaven.test.skip=true```
+```bash
+docker-compose run openapi-generator mvn package -Dmaven.test.skip=true
+```
 
 Then build the SDK for PHP like this:
 
-```OPENAPI_GENERATOR=php docker-compose run openapi-generator```
+```bash
+OPENAPI_GENERATOR=php docker-compose run openapi-generator
+```
 
 ## Adding support for other languages.
 
-SDKs for other languages could theoretically be built by configuring `docker-compose.yml` and creating an
-openapi-config.foo.json for the language you wish to generate for.
+SDKs for other languages could theoretically be built by creating an `openapi-config.foo.json` for the language you wish
+to generate for and using `OPENAPI_GENERATOR=foo`.
 
 It hasn't been tested with other languages though.
