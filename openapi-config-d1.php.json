@@ -1,0 +1,13 @@
+{
+  "packageName": "bungie-d1-sdk-php",
+  "composerVendorName": "yogarine",
+  "composerProjectName": "bungie-d1-sdk-php",
+  "invokerPackage" : "Bungie\\D1",
+  "modelPackage": "Model",
+  "variableNamingConvention": "camelCase",
+  "srcBasePath": "src",
+  "gitUserId": "Yogarine",
+  "gitRepoId": "bungie-d1-sdk-php",
+  "validateSpec": false,
+  "removeOperationIdPrefix": true
+}
