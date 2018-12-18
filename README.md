@@ -34,12 +34,12 @@ docker-compose run openapi-generator mvn package -Dmaven.test.skip=true
 Then build the SDK for PHP like this:
 
 ```bash
-OPENAPI_GENERATOR=php docker-compose run openapi-generator
+./generate-php.sh
 ```
 
 ## Adding support for other languages.
 
-SDKs for other languages could theoretically be built by creating an `openapi-config.foo.json` for the language you wish
-to generate for and using `OPENAPI_GENERATOR=foo`.
+SDKs for other languages could theoretically be built by creating an `openapi-config.foo.json` and `generate-php.sh` for
+the language that you wish to build for.
 
 It hasn't been tested with other languages though.

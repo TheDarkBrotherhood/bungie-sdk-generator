@@ -1,6 +1,9 @@
 [submodule "bungie-sdk-php"]
 	path = bungie-sdk-php
 	url = git@github.com:Yogarine/bungie-sdk-php.git
+[submodule "bungie-d1-sdk-php"]
+	path = bungie-d1-sdk-php
+	url = git@github.com:Yogarine/bungie-d1-sdk-php.git
 [submodule "openapi-generator"]
 	path = openapi-generator
 	url = git@github.com:Yogarine/openapi-generator.git

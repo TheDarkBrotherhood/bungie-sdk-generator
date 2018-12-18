@@ -4,20 +4,12 @@ services:
   openapi-generator:
     image: "maven:3-jdk-8"
     volumes:
-    - "./openapi-generator:/opt/openapi-generator"
-    - ".:/local"
-    - "${HOME}/.m2/repository:/var/maven/.m2/repository"
+      - "./openapi-generator:/opt/openapi-generator"
+      - ".:/local"
+      - "${HOME}/.m2/repository:/var/maven/.m2/repository"
     environment:
       GEN_DIR: "/opt/openapi-generator"
       MAVEN_OPTS: "-Duser.home=/var/maven"
       MAVEN_CONFIG: "/var/maven/.m2"
     working_dir: "/opt/openapi-generator"
     entrypoint: "/opt/openapi-generator/docker-entrypoint.sh"
-    command: >
-      generate
-      --generator-name ${OPENAPI_GENERATOR:-php}
-      --config         /local/openapi-config.${OPENAPI_GENERATOR:-php}.json
-      --input-spec     https://raw.githubusercontent.com/Bungie-net/api/master/openapi.json
-      --output         /local/bungie-sdk-${OPENAPI_GENERATOR:-php}
-      -DapiTests=false
-      -DmodelTests=false
